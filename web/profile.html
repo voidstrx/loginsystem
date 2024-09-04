@@ -1,0 +1,41 @@
+<form class="w3-container" method="post" action="process.php">
+    <div class="w3-section">
+        <label><b>Имя пользователя</b>
+            <input class="w3-input w3-border w3-margin-bottom" type="text"
+                value="<?php echo $user->getUsername(); ?>" name="username" autocomplete="on" required>
+        </label>
+
+        <label><b>Телефон</b>
+            <input class="w3-input w3-border w3-margin-bottom" type="tel"
+            value="<?php echo $user->getPhone(); ?>" name="phone" autocomplete="on" required>
+        </label>
+
+
+        <label><b>Почта</b>
+            <input class="w3-input w3-border w3-margin-bottom" type="email"
+            value="<?php echo $user->getEmail(); ?>" name="email" autocomplete="on" required>
+        </label>
+
+        <label><b>Текущий пароль</b>
+            <input class="w3-input w3-border" type="password" 
+             name="password" autocomplete="on" required>
+        </label>
+        
+        <br>
+
+        <label><b>Новый пароль</b>
+            <input class="w3-input w3-border" type="password" 
+            value="" name="new_password" autocomplete="off" >
+        </label>
+
+        <label><b>Повторите пароль</b>
+            <input class="w3-input w3-border" type="password" 
+            value="" name="confirm_password" autocomplete="off" >
+        </label>
+
+        <br><input type="hidden" name="type" value="update">
+
+        <button class="w3-button w3-block w3-green w3-section w3-padding"
+            type="submit">Сохранить</button>
+    </div>
+</form>

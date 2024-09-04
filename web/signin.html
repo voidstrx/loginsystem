@@ -1,0 +1,35 @@
+<p>
+    <button onclick="document.getElementById('signIn').style.display='block'"
+        class="w3-button w3-hover-green">Авторизоваться</button>
+</p>
+
+<div id="signIn" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+        <form class="w3-container" method="post" action="process.php">
+            <div class="w3-section">
+                <label><b>Имя пользователя</b>
+                    <input class="w3-input w3-border w3-margin-bottom" type="name"
+                        placeholder="Введите имя или email" name="username" autocomplete="username" required>
+                </label>
+                <label><b>Пароль</b>
+                    <input class="w3-input w3-border" type="password" placeholder="Введите пароль"
+                        name="password" required>
+                </label>
+
+                <br><input type="hidden" name="type" value="in">
+                <div id="captcha-container" class="smart-captcha"
+                    data-sitekey="ysc1_xGgIqchgFVcxSUHQnHtgGj6UZqVhanpazW10gKww55e8391c"></div>
+
+
+                <button class="w3-button w3-block w3-green w3-section w3-padding"
+                    type="submit">Войти</button>
+            </div>
+        </form>
+
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+            <button onclick="document.getElementById('signIn').style.display='none'" type="button"
+                class="w3-button w3-red">Отмена</button>
+        </div>
+    </div>
+</div>

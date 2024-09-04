@@ -1,0 +1,53 @@
+<p>
+    <button onclick="document.getElementById('signUp').style.display='block'"
+        class="w3-button w3-hover-green">Зарегистрироваться</button>
+</p>
+
+<div id="signUp" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+        <form class="w3-container" method="post" action="process.php">
+            <div class="w3-section">
+                <label><b>Имя пользователя</b>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text"
+                        placeholder="Введите имя" name="username" autocomplete="username" required>
+                </label>
+
+                <label><b>Телефон</b>
+                    <input class="w3-input w3-border w3-margin-bottom" type="tel"
+                    placeholder="81234567890" name="phone" autocomplete="on" required>
+                </label>
+
+
+                <label><b>Почта</b>
+                    <input class="w3-input w3-border w3-margin-bottom" type="email"
+                    placeholder="user@mail.ru" name="email" autocomplete="on" required>
+                </label>
+
+                <label><b>Пароль</b>
+                    <input class="w3-input w3-border" type="password" placeholder="Введите пароль"
+                        name="password" required>
+                </label>
+
+                <label><b>Повторите пароль</b>
+                    <input class="w3-input w3-border" type="password" placeholder="Введите пароль"
+                        name="confirm_password" required>
+                </label>
+
+
+                <br><input type="hidden" name="type" value="up">
+                <div id="captcha-container" class="smart-captcha"
+                    data-sitekey="ysc1_xGgIqchgFVcxSUHQnHtgGj6UZqVhanpazW10gKww55e8391c"></div>
+
+
+                <button class="w3-button w3-block w3-green w3-section w3-padding"
+                    type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+            <button onclick="document.getElementById('signUp').style.display='none'" type="button"
+                class="w3-button w3-red">Отмена</button>
+        </div>
+    </div>
+</div>
