@@ -50,7 +50,7 @@ function httpPostRequest()
             $user = new User();
 
             //registration
-            if (isset($_POST["type"]) && $_POST['type'] === 'up')
+            if ($_POST['type'] === 'up')
                 if ($user->request('signUp',$_POST['username'], $_POST['password'], $_POST['email'], 
                 $_POST['confirm_password'], $_POST['phone'])) {
                     header('location: profile.php');
@@ -58,7 +58,7 @@ function httpPostRequest()
                 }
 
             //authentication
-            if (isset($_POST["type"]) && $_POST['type'] === 'in')
+            if ($_POST['type'] === 'in')
                 if ($user->request('signIn',$_POST['username'], $_POST['password'])) {
                     header('location: profile.php');
                     return;
