@@ -1,5 +1,5 @@
 <?php
-include 'class/user.php';
+require_once 'class/user.php';
 if (!isset($_SESSION['id'])) {
     header('location: index.php');
     exit;
